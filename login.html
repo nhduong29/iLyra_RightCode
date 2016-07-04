@@ -1,0 +1,52 @@
+  <div class="login-container lightmode">
+
+     <div class="login-box animated fadeInDown">
+         <div class="login-logo"></div>
+         <div class="login-body">
+             <div class="login-title"><strong>{{'WELCOME' | translate}}</strong>, {{'PLEASE_LOGIN' | translate}}</div>
+             <div ng-show="error" class="alert alert-danger">{{error}}</div>
+             <form name="form" class="form-horizontal" ng-submit="login()" role="form">
+                 <div class="form-group">
+                     <div class="col-md-12">
+                         <input type="text" class="form-control" placeholder="Username" name="username" id="username" ng-model="username" required/>
+                         <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">{{'USERNAME_IS_REQUIRED' | translate}}</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <div class="col-md-12">
+                         <input type="password" name="password" id="password" class="form-control" placeholder="Password" ng-model="password" required/>
+                         <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">{{'PASSWORD_IS_REQUIRED' | translate}}</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <div class="col-md-6">
+                         <a href="#" class="btn btn-link btn-block">{{'FORGOT_YOUR_PASSWORD' | translate}}?</a>
+                     </div>
+                     <div class="col-md-6">
+                         <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger" class="btn btn-info btn-block">{{'LOG_IN' | translate}}</button>
+                         <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+                     </div>
+                 </div>
+             </form>
+         </div>
+         <div class="login-footer">
+             <div class="pull-left">
+                 &copy; 2016 iLyra
+             </div>
+             <div class="pull-right">
+                 <a href="http://nhduong.xyz/">{{'ABOUT' | translate}}</a> |
+                 <a href="#">{{'PRIVACY' | translate}}</a> |
+                 <a href="#">{{'CONTACT_US' | translate}}</a> |
+                 <a href="" title="Tiếng Việt" ng-click="changeLanguage('vi')"><span class="lang-vie" ></span></a>
+                 <a href="" title="English" ng-click="changeLanguage('en')"><span class="lang-eng"></span></a>
+             </div>
+         </div>
+     </div>
+
+ </div>
+
+
+
+
+
+

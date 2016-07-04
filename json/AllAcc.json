@@ -1,0 +1,75 @@
+{
+    "content": [
+        {
+            "accountID": 1,
+            "username": "nhlong",
+            "password": "123456",
+            "role": "ADMINISTRATOR",
+            "active": true
+        },
+        {
+            "accountID": 2,
+            "username": "tqdkhoa",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 3,
+            "username": "ctson",
+            "password": "abcdef",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 5,
+            "username": "uhphuc",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 6,
+            "username": "nhthu",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 7,
+            "username": "ctminh",
+            "password": "123abc",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 8,
+            "username": "nhlong1",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 9,
+            "username": "phphuoc",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        {
+            "accountID": 11,
+            "username": "nqhuy",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 9,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 9
+}

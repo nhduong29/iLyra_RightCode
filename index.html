@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="body-full-height">
+    <head>        
+        <!-- META SECTION -->
+        <title>iLyra Administrator</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <!-- EOF CSS INCLUDE -->                                    
+    </head>
+    <body ng-app="iLyra" ng-controller="CommonController" ng-view>
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="js/plugins/owl/owl.carousel.min.js"></script>                 
+        
+        <script type="text/javascript" src="js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
+        
+         <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/plugins/tableexport/tableExport.js"></script>
+		<script type="text/javascript" src="js/plugins/tableexport/jquery.base64.js"></script>
+		<script type="text/javascript" src="js/plugins/tableexport/html2canvas.js"></script>
+		<script type="text/javascript" src="js/plugins/tableexport/jspdf/libs/sprintf.js"></script>
+		<script type="text/javascript" src="js/plugins/tableexport/jspdf/jspdf.js"></script>
+		<script type="text/javascript" src="js/plugins/tableexport/jspdf/libs/base64.js"></script>
+
+        <script type='text/javascript' src='js/plugins/noty/jquery.noty.js'></script>
+        <script type='text/javascript' src='js/plugins/noty/layouts/topCenter.js'></script>
+        <script type='text/javascript' src='js/plugins/noty/layouts/topLeft.js'></script>
+        <script type='text/javascript' src='js/plugins/noty/layouts/topRight.js'></script>
+        <script type='text/javascript' src='js/plugins/noty/themes/default.js'></script>
+        <!-- END THIS PAGE PLUGINS-->        
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/settings.js"></script>
+        
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/demo_dashboard.js"></script>
+        <script type="text/javascript" src="js/demo_charts_morris.js"></script>
+        <!-- END TEMPLATE -->
+
+        <!--ANGULARJS-->
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-cookies.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.6/angular-resource.js"></script>
+        <script type="text/javascript" src="js/plugins/angular-datatables/angular-datatables.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.8.1/angular-translate.js"></script>
+        <script src="app/language/en.js"></script>
+        <script src="app/language/vi.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/directives/CommonDirective.js"></script>
+        <script src="app/CommonController.js"></script>
+        <script src="app/CommonServices.js"></script>
+        <script src="app/account/AccountServices.js"></script>
+        <script src="app/profile/ProfileController.js"></script>
+        <script src="app/account/AccountController.js"></script>
+        <script src="app/login/LoginServices.js"></script>
+        <script src="app/login/LoginController.js"></script>
+        <script src="app/dashboard/DashboardServices.js"></script>
+        <script src="app/dashboard/DashboardController.js"></script>
+        <script src="app/itemType/ItemTypeServices.js"></script>
+        <script src="app/itemType/ItemTypeController.js"></script>
+        <script src="app/node/NodeServices.js"></script>
+        <script src="app/node/NodeController.js"></script>
+        <script src="app/item/ItemServices.js"></script>
+        <script src="app/item/ItemController.js"></script>
+        <script src="app/payment/PaymentServices.js"></script>
+        <script src="app/payment/PaymentController.js"></script>
+        <script src="app/customer/CustomerServices.js"></script>
+        <script src="app/customer/CustomerController.js"></script>
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
+
+
+
+
+
+

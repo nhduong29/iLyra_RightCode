@@ -1,0 +1,22 @@
+{
+    "customerID": 3,
+    "name": "Nguyễn Hoàng Long",
+    "address": "149/20/7 Nguyễn Duy Cung F12 Gò Vấp",
+    "birthday": null,
+    "sex": true,
+    "email": "hoanglong0190@gmail.com",
+    "phoneNumber": null,
+    "account": {
+        "accountID": 8,
+        "username": "nhlong1",
+        "password": "123456",
+        "role": "USER",
+        "active": true
+    },
+    "paymentPlan": {
+        "planID": 2,
+        "name": "Standard",
+        "amount": 150000,
+        "description": "Gói Standard"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "content": [
+        {
+            "transactionID": 4,
+            "payPeriod": "Tháng 8 năm 2015",
+            "description": null,
+            "paidDate": 1463392701000,
+            "customer": {
+                "customerID": 2,
+                "name": "Trần Quang Long Khoa",
+                "address": "Trường Chinh Tân Bình",
+                "birthday": null,
+                "sex": true,
+                "email": "tqdkhoa@tma.com.vn",
+                "phoneNumber": null,
+                "account": {
+                    "accountID": 2,
+                    "username": "tqdkhoa",
+                    "password": "123456",
+                    "role": "USER",
+                    "active": true
+                },
+                "paymentPlan": {
+                    "planID": 1,
+                    "name": "Economic",
+                    "amount": 100000,
+                    "description": "Gói Economic cơ bản, cung cấp các tính năng thiết yếu"
+                }
+            }
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 1,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 1
+}

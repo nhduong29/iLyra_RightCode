@@ -1,0 +1,51 @@
+{
+    "content": [
+        {
+            "adminID": 1,
+            "name": "Nguyễn Hoàng Long",
+            "email": "nhlong@tma.com.vn",
+            "phoneNumber": "0988950908",
+            "account": {
+                "accountID": 1,
+                "username": "nhlong",
+                "password": "123456",
+                "role": "ADMINISTRATOR",
+                "active": true
+            }
+        },
+        {
+            "adminID": 3,
+            "name": "Nguyễn Hoàn Thu",
+            "email": "nhlong@tma.com.vn",
+            "phoneNumber": "0988950908",
+            "account": {
+                "accountID": 6,
+                "username": "nhthu",
+                "password": "123456",
+                "role": "USER",
+                "active": true
+            }
+        },
+        {
+            "adminID": 4,
+            "name": "Nguyễn Quốc Huy",
+            "email": "nqhuy@tma.com.vn",
+            "phoneNumber": "0999999999",
+            "account": {
+                "accountID": 11,
+                "username": "nqhuy",
+                "password": "123456",
+                "role": "TECHNICAL",
+                "active": true
+            }
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 3,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 3
+}

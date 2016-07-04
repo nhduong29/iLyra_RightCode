@@ -1,0 +1,27 @@
+{
+    "content": [
+        {
+            "typeID": 1,
+            "name": "Cảm biến nhiệt độ",
+            "description": "Sử dụng để đo nhiệt độ của vườn rau"
+        },
+        {
+            "typeID": 3,
+            "name": "Cảm biến độ ẩm",
+            "description": "Sử dụng đo độ ẩm đất"
+        },
+        {
+            "typeID": 5,
+            "name": "Cảm biến sức gió",
+            "description": "Sử dụng để đo nhiệt độ của vườn rau"
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 3,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 3
+}

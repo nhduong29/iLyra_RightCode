@@ -1,0 +1,30 @@
+{
+    "content": [
+        {
+            "planID": 1,
+            "name": "Economic",
+            "amount": 100000,
+            "description": "Gói Economic cơ bản, cung cấp các tính năng thiết yếu"
+        },
+        {
+            "planID": 2,
+            "name": "Standard",
+            "amount": 150000,
+            "description": "Gói Standard"
+        },
+        {
+            "planID": 3,
+            "name": "Premium",
+            "amount": 200000,
+            "description": "Gói Premium tada"
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 3,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 3
+}

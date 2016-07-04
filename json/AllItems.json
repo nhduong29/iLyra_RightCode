@@ -1,0 +1,42 @@
+{
+    "content": [
+        {
+            "itemID": 1,
+            "name": "TEMP_SENSOR_01",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "sendRate": 0,
+            "status": false,
+            "itemType": {
+                "typeID": 1,
+                "name": "Cảm biến nhiệt độ",
+                "description": "Sử dụng để đo nhiệt độ của vườn rau"
+            }
+        },
+        {
+            "itemID": 2,
+            "name": "TEMP_SENSOR_02",
+            "x": 0,
+            "y": 3,
+            "w": 33,
+            "h": 44,
+            "sendRate": 2.5,
+            "status": false,
+            "itemType": {
+                "typeID": 1,
+                "name": "Cảm biến nhiệt độ",
+                "description": "Sử dụng để đo nhiệt độ của vườn rau"
+            }
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 2,
+    "size": 20,
+    "number": 0,
+    "sort": null,
+    "first": true,
+    "numberOfElements": 2
+}

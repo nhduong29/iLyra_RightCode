@@ -1,0 +1,372 @@
+[
+    {
+        "customerID": 2,
+        "name": "Trần Quang Long Khoa",
+        "address": "Trường Chinh Tân Bình",
+        "birthday": null,
+        "sex": true,
+        "email": "tqdkhoa@tma.com.vn",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 2,
+            "username": "tqdkhoa",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 1,
+            "name": "Economic",
+            "amount": 100000,
+            "description": "Gói Economic cơ bản, cung cấp các tính năng thiết yếu"
+        }
+    },
+    {
+        "customerID": 3,
+        "name": "Nguyễn Hoàng Long",
+        "address": "149/20/7 Nguyễn Duy Cung F12 Gò Vấp",
+        "birthday": null,
+        "sex": true,
+        "email": "hoanglong0190@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 8,
+            "username": "nhlong1",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 2,
+            "name": "Standard",
+            "amount": 150000,
+            "description": "Gói Standard"
+        }
+    },
+    {
+        "customerID": 4,
+        "name": "Ưng Hoàng Phúc",
+        "address": "149/20/7",
+        "birthday": null,
+        "sex": true,
+        "email": "hoangphuc@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 5,
+            "username": "uhphuc",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 3,
+            "name": "Premium",
+            "amount": 200000,
+            "description": "Gói Premium tada"
+        }
+    },
+    {
+        "customerID": 5,
+        "name": "Châu Trọng Minh",
+        "address": "Bà Rịa Vũng Tàu",
+        "birthday": null,
+        "sex": true,
+        "email": "ctminh@tma.com.vn",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 7,
+            "username": "ctminh",
+            "password": "123abc",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 1,
+            "name": "Economic",
+            "amount": 100000,
+            "description": "Gói Economic cơ bản, cung cấp các tính năng thiết yếu"
+        }
+    },
+    {
+        "customerID": 6,
+        "name": "Phạm Hồng Phước",
+        "address": "Gò Vấp",
+        "birthday": null,
+        "sex": true,
+        "email": "hongphuoc@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 9,
+            "username": "phphuoc",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 3,
+            "name": "Premium",
+            "amount": 200000,
+            "description": "Gói Premium tada"
+        }
+    },
+    {
+        "customerID": 7,
+        "name": "Nguyễn Khánh Nam",
+        "address": "Bình Tân",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 14,
+            "username": "nknam",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 8,
+        "name": "Nguyễn Thái Bình",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 20,
+            "username": "ntbinh",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 9,
+        "name": "Nguyễn Thái Phong",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 21,
+            "username": "ntphong",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 10,
+        "name": "Nguyễn Thái Vũ",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 22,
+            "username": "ntvu",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 11,
+        "name": "Nguyễn Binh Minh",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 23,
+            "username": "nbminh",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 12,
+        "name": "Nguyễn Đắc Phú",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 24,
+            "username": "ndphu",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 13,
+        "name": "Nguyễn Đắc Vinh",
+        "address": "Bình Minh",
+        "birthday": null,
+        "sex": true,
+        "email": "bnchau@tma.com.vn",
+        "phoneNumber": "0255645875",
+        "account": {
+            "accountID": 25,
+            "username": "ndvinh",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 14,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": true,
+        "email": "zorophongtran@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 26,
+            "username": "nhuuduong",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 15,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": true,
+        "email": "havakidseo@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 27,
+            "username": "nhduong29",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 16,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": false,
+        "email": "havakidseo@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 28,
+            "username": "nhduong291",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 17,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": true,
+        "email": "zorophongtran@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 29,
+            "username": "nhduong292",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 18,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": false,
+        "email": "zorophongtran@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 30,
+            "username": "nhduong2923",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 19,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": true,
+        "email": "zorophongtran@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 31,
+            "username": "xxxxxxx",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 20,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": null,
+        "sex": false,
+        "email": "zorophongtran@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 33,
+            "username": "duongt",
+            "password": "123456",
+            "role": "USER",
+            "active": true
+        },
+        "paymentPlan": null
+    },
+    {
+        "customerID": 24,
+        "name": "Nguyen",
+        "address": "Tân Bình, Ho Chi Minh, Vietnam",
+        "birthday": 0,
+        "sex": true,
+        "email": "nhomkinhvanlam@gmail.com",
+        "phoneNumber": null,
+        "account": {
+            "accountID": 37,
+            "username": "u750278818",
+            "password": "123456",
+            "role": "TECHNICAL",
+            "active": true
+        },
+        "paymentPlan": {
+            "planID": 2,
+            "name": "Standard",
+            "amount": 150000,
+            "description": "Gói Standard"
+        }
+    }
+]

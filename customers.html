@@ -1,0 +1,287 @@
+
+    <!--<body ng-app="iLyra" ng-controller="customerController">-->
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <slider-bar></slider-bar>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <header-menu></header-menu>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#/">{{'HOME' | translate}}</a></li>
+                    <li class="active">{{'CUSTOMERS' | translate}}</li>
+                </ul>
+                <!-- END BREADCRUMB -->                       
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <!-- START DATATABLE EXPORT -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">{{'CUSTOMERS_IN_SYTEM' | translate}}</h3>
+                                    <div class="btn-group pull-right">
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#new-customer-form"><i class="fa fa-plus-circle"></i> {{'CREATE_NEW_CUSTOMER' | translate}}</button>
+                                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'json',escape:'false'});"><img src='img/icons/json.png' width="24"/> JSON</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'json',escape:'false',ignoreColumn:'[2,3]'});"><img src='img/icons/json.png' width="24"/> JSON (ignoreColumn)</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'json',escape:'true'});"><img src='img/icons/json.png' width="24"/> JSON (with Escape)</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'xml',escape:'false'});"><img src='img/icons/xml.png' width="24"/> XML</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'sql'});"><img src='img/icons/sql.png' width="24"/> SQL</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'csv',escape:'false'});"><img src='img/icons/csv.png' width="24"/> CSV</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'txt',escape:'false'});"><img src='img/icons/txt.png' width="24"/> TXT</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'excel',escape:'false'});"><img src='img/icons/xls.png' width="24"/> XLS</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'doc',escape:'false'});"><img src='img/icons/word.png' width="24"/> Word</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'powerpoint',escape:'false'});"><img src='img/icons/ppt.png' width="24"/> PowerPoint</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'png',escape:'false'});"><img src='img/icons/png.png' width="24"/> PNG</a></li>
+                                            <li><a href="#" onClick ="$('#customers2').tableExport({type:'pdf',escape:'false'});"><img src='img/icons/pdf.png' width="24"/> PDF</a></li>
+                                        </ul>
+                                    </div>                                    
+                                    
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                    <table
+                                            datatable="ng"
+                                            id="customers2"
+                                            class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>{{'NAME' | translate}}</th>
+                                                <th>{{'USERNAME' | translate}}</th>
+                                                <th>{{'ADDRESS' | translate}}</th>
+                                                <th>{{'SEX' | translate}}</th>
+                                                <th>{{'DATE_OF_BIRTH' | translate}}</th>
+                                                <th>{{'EMAIL' | translate}}</th>
+                                                <th>{{'PHONE' | translate}}</th>
+                                                <th>{{'STATUS' | translate}}</th>
+                                                <th>{{'DETAIL' | translate}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="customer in customers" id="{{customer.customerID}}">
+                                                <td>{{customer.name}}</td>
+                                                <td>{{customer.account.username}}</td>
+                                                <td>{{customer.address}}</td>
+                                                <td>{{customer.sex}}</td>
+                                                <td>{{showDateFromTimestamp(customer.birthday)}}</td>
+                                                <td>{{customer.email}}</td>
+                                                <td>{{customer.phoneNumber}}</td>
+                                                <td>{{customer.account.active}}</td>
+                                                <th><a type="button" class="btn btn-info" href="#/customer/edit/{{customer.customerID}}">{{'SHOW_DETAIL' | translate}}</a></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END DATATABLE EXPORT -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!--START MODALS -->
+        <div class="modal" id="new-customer-form" tabindex="-1" role="dialog" aria-labelledby="largeModalHead" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{'CLOSE' | translate}}</span></button>
+                        <h4 class="modal-title" id="largeModalHead">{{'CREATE_NEW_CUSTOMER' | translate}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <form class="form-horizontal" id="newCustomerForm" name ="newCustomerForm" role="form" ng-submit="addNewCustomer(newCustomerForm.$valid,newCustomer)" novalidate>
+
+                                    <div class="panel panel-default tabs">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">{{'PERSONAL_DATA' | translate}}</a></li>
+                                            <li><a href="#tab-third" role="tab" data-toggle="tab">{{'DATA_SETINGS' | translate}}</a></li>
+                                        </ul>
+                                        <div class="panel-body tab-content">
+                                            <div class="tab-pane active" id="tab-first">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p>{{'CREATE_NEW_ACCOUNT_FOR_SYSTEM' | translate}}</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+
+                                                        <div class="form-group" ng-class="{ 'has-error' : newCustomerForm.username.$invalid }">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'USERNAME' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input  type="text" class=" form-control" name="username" id="username"
+                                                                        ng-model="newCustomer.account.username"
+                                                                        ng-minlength="3"
+                                                                        required/>
+                                                                <p ng-show="newCustomerForm.username.$dirty && newCustomerForm.username.$invalid" class="help-block">{{'USERNAME_IS_REQUIRED' | translate}}</p>
+                                                                <p ng-show="newCustomerForm.username.$error.minlength" class="help-block">{{'USERNAME_IS_TO_SHORT' | translate}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group"
+                                                             ng-class="{ 'has-error' : newCustomerForm.password.$dirty && newCustomerForm.password.$error.pattern}">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'PASSWORD' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input type="password" class=" form-control"
+                                                                       name="password"
+                                                                       ng-model="newCustomer.account.password"
+                                                                       ng-pattern='passwordPattern'
+                                                                       required/>
+                                                                <p ng-show="newCustomerForm.password.$dirty && newCustomerForm.password.$invalid " class="help-block">{{'PASSWORD_IS_REQUIRED' | translate}}</p>
+                                                                <p ng-show="newCustomerForm.password.$dirty && newCustomerForm.password.$error.pattern" class="help-block">
+                                                                    {{'PASSWORD_IS_REQUIRED_MESSAGE' | translate}}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'ROLE' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <select class="form-control " ng-model="newCustomer.account.role">
+                                                                    <option>USER</option>
+                                                                    <option >TECHNICAL</option>
+                                                                    <option>ADMINISTRATOR</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'PAYMENT_TYPE' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <select class="form-control "
+                                                                        ng-options="option.name for option in pamentPlantType track by option.planID"
+                                                                        ng-model="newCustomer.paymentPlan">
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group"
+                                                             ng-class="{ 'has-error' : newCustomerForm.name.$invalid}">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'NAME' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input type="text" class="form-control" name="name" ng-model="newCustomer.name"
+                                                                        required/>
+                                                                <p ng-show="newCustomerForm.name.$dirty && newCustomerForm.name.$invalid" class="help-block">{{'NAME_IS_REQUIRED' | translate}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group"
+                                                             ng-class="{ 'has-error' : newCustomerForm.email.$invalid}">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'EMAIL' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input type="email" class="form-control" name="email" ng-model="newCustomer.email"/>
+                                                                <p ng-show="newCustomerForm.email.$invalid" class="help-block">{{'ENTER_A_VALID_EMAIL' | translate}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'AVATAR' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input type="file" class="fileinput btn-success" name="file-avatar" id="file-avatar" title="Click to add avatar"/>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'DATE_OF_BIRTH' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="input-group">
+                                                                    <input type="text" id="birthday" class="form-control"
+                                                                           id="birthday"
+                                                                           data-date-format="yyyy-mm-dd"
+                                                                           data-date-viewmode="years"
+                                                                           ng-model="newCustomer.birthday">
+                                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'SEX' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12"><!--class="iradio"-->
+                                                                <label class="check"><input type="radio" id="male" name="sex" checked="checked" value="male" ng-model="newCustomer.sex"/> {{'MALE' | translate}}</label>
+                                                                <label class="check"><input type="radio" id="female" name="sex" value="female" ng-model="newCustomer.sex"/> {{'FEMALE' | translate}}</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'PHONE' |translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input  type="text" class=" form-control" name="phone" id="phone"
+                                                                        ng-model="newCustomer.phoneNumber"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 col-xs-12 control-label">{{'ADDRESS' | translate}}</label>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <input type="text" class="form-control" id="address" ng-model="newCustomer.address"/>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <!--<div class="col-md-12">
+                                                        <pre>{{newCustomer | json}}</pre>
+                                                    </div>-->
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-pane" id="tab-third">
+                                                <p>This is non libero bibendum, scelerisque arcu id, placerat nunc. Integer ullamcorper rutrum dui eget porta. Fusce enim dui, pulvinar a augue nec, dapibus hendrerit mauris. Praesent efficitur, elit non convallis faucibus, enim sapien suscipit mi, sit amet fringilla felis arcu id sem. Phasellus semper felis in odio convallis, et venenatis nisl posuere. Morbi non aliquet magna, a consectetur risus. Vivamus quis tellus eros. Nulla sagittis nisi sit amet orci consectetur laoreet.</p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <button class="btn btn-default" ng-click="clearForm()">{{'CLEAR_FORM' | translate}}</button><!--ng-click="addCustomer(newCustomer)"-->
+                                            <button class="btn btn-primary pull-right"  >{{'SAVE_CHANGES' | translate}} <span class="fa fa-floppy-o fa-right"></span></button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">{{'CLOSE' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END MODALS-->
+
+    <!-- danger with sound -->
+    <div class="message-box message-box-danger animated fadeIn" data-sound="fail" id="message-box-sound-2">
+        <div class="mb-container">
+            <div class="mb-middle">
+                <div class="mb-title"><span class="fa fa-times"></span> <span class="title-error"></span></div>
+                <div class="mb-content">
+                    <p class="exception"></p>
+                    <p class="message"></p>
+                </div>
+                <div class="mb-footer">
+                    <button class="btn btn-default btn-lg pull-right mb-control-close">{{'CLOSE' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end danger with sound -->
